@@ -46,6 +46,7 @@ campoSaldo.innerHTML = '0'
 
 function somarAoSaldo(soma:number) {
     campoSaldo.innerHTML = (parseInt(campoSaldo.innerHTML) +  soma).toString();
+    
 }
 
 function limparSaldo() {
@@ -54,6 +55,7 @@ function limparSaldo() {
 
 botaoAtualizar.addEventListener('click', function () {
     let soma2 = parseInt(soma.value)
+    soma.value = ''
     somarAoSaldo(soma2);
 });
 
