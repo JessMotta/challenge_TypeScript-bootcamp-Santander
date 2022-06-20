@@ -42,10 +42,21 @@ function somarAoSaldo(soma) {
 function limparSaldo() {
     campoSaldo.innerHTML = '';
 }
+// botaoAtualizar.addEventListener('click', function () {
+//     let soma2 = parseInt(soma.value)
+//     if(!soma2){
+//        alert('Digite um número válido');
+//     } else {  
+//         soma.value = ''
+//         somarAoSaldo(soma2);
+//     }
+// });
 botaoAtualizar.addEventListener('click', function () {
-    let soma2 = parseInt(soma.value);
-    soma.value = '';
-    somarAoSaldo(soma2);
+    if (Number(soma.value)) {
+        let soma2 = parseInt(soma.value);
+        soma.value = '';
+        somarAoSaldo(soma2);
+    }
 });
 botaoLimpar.addEventListener('click', function () {
     limparSaldo();

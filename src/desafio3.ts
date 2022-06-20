@@ -54,10 +54,17 @@ function limparSaldo() {
 }
 
 botaoAtualizar.addEventListener('click', function () {
-    let soma2 = parseInt(soma.value)
-    soma.value = ''
-    somarAoSaldo(soma2);
+    let somaFinal = parseInt(soma.value)
+    if(!somaFinal){
+       alert('Digite um número válido');
+    } else {  
+        soma.value = ''
+        somarAoSaldo(somaFinal);
+    }
+   
 });
+
+
 
 botaoLimpar.addEventListener('click', function () {
     limparSaldo();
